@@ -1,0 +1,423 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    font-family: "Encode Sans", sans-serif;
+}
+
+body {
+    background-color: #1E1E1E;
+    color: rgba(255, 255, 255, 0.8);
+    font-family: "Encode Sans", sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: unset;
+}
+
+/* Scrollbar */
+
+html {
+    overflow-y: scroll;
+    /* overflow-x: scroll; */
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 0.6vw;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #1E1E1E;
+    border: 0.125vw solid #f1f1f1;
+    border-radius: 0.625vw;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #1F1F20;
+    cursor: pointer;
+}
+
+/* Navbar */
+nav {
+    background-color: transparent;
+    position: fixed;
+    top: 2vh;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav .navbar {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 60%;
+    height: 8vh;
+    padding: 0.8vh 0;
+    margin: 1vh 0;
+    background-color: #1F1F20;
+    box-shadow: 0.0625vw 0.0625vw 0.3125vw rgb(255, 255, 255, 0.5);
+    border-radius: 25vw;
+}
+
+nav .navbar .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: 100%;
+    margin: 0 1.5vw;
+}
+
+nav .navbar .logo img {
+    width: 4vh;
+    height: 4vh;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+nav .navbar .logo p {
+    font-size: 1vw;
+    font-weight: 700;
+    margin-left: 0.5vw;
+}
+
+nav .navbar .components {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: auto;
+    height: 100%;
+}
+
+nav .navbar .components .search {
+    width: 12.5vw;
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0.0625vw solid rgba(255, 255, 255, 0.1);
+    border-radius: 0.3vw;
+    padding-left: 0.5vw;
+    margin-right: 1vw;
+    margin-left: 0.5vw;
+}
+
+nav .navbar .components .search:hover {
+    box-shadow: 0.0625vw 0.0625vw 0.3125vw rgb(255, 255, 255, 0.5);
+}
+
+nav .navbar .components .search input {
+    /* position: relative;
+    top: 0;
+    left: 0; */
+    width: 100%;
+    height: 100%;
+    padding: 0.5vh 0.5vw;
+    /* padding-left: 2vw; */
+    background-color: #1F1F20;
+    color: rgba(255, 255, 255, 0.8);
+    /* border: 0.0625vw solid rgba(255, 255, 255, 0.1);
+    border-radius: 0.3vw; */
+    border: none;
+    outline: none;
+    font-size: 1vw;
+    /* z-index: 1000; */
+}
+
+nav .navbar .components .search input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+nav .navbar .components .search i {
+    /* position: relative;
+    top: 0;
+    left: 1.5vw; */
+    font-size: 0.8vw;
+    padding: 2px;
+    color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    /* z-index: 2000; */
+}
+
+nav .navbar .components a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.95vw;
+    margin: 0 1vw;
+}
+
+nav .navbar .components a:hover {
+    color: rgba(255, 255, 255, 1);
+}
+
+nav .navbar button {
+    width: auto;
+    height: 4.75vh;
+    padding: 0 1vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #EB5534;
+    border: 0.0625vw solid red;
+    border-radius: 0.5vw;
+    font-size: 0.9vw;
+    color: rgba(255, 255, 255, 0.8);
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: 2vw;
+}
+
+nav .navbar button:hover {
+    background-color: #FF6A3D;
+}
+
+/* Video */
+
+.videoBox {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: start;
+    align-items: center;
+    width: 96vw;
+    height: 60vh;
+    background: linear-gradient(0deg,rgba(20, 20, 20, 0) 0%,  #874444 100%);
+    border: 0.0625vw solid #262626;
+    border-radius: 0.5vw;
+    margin: auto;
+    margin-top: 15vh;
+}
+
+.videoBox button {
+    width: 8vw;
+    height: 6vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FF5029;
+    border: 0.0625vw solid red;
+    border-radius: 0.5vw;
+    font-size: 0.9vw;
+    color: rgba(255, 255, 255, 1);
+    cursor: pointer;
+    margin-top: 25vh;
+    margin-bottom: 4vh;
+}
+
+.videoBox button:hover {
+    background-color: #FF6A3D;
+}
+
+.videoBox i {
+    font-size: 1vw;
+    margin-right: 0.5vw;
+}
+
+.videoBox h2 {
+    font-size: 2vw;
+    font-weight: 700;
+    margin: 2vh 0;
+    color: rgba(255, 255, 255, 1);
+}
+
+.videoBox p {
+    font-size: 1vw;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 2vh;
+    text-align: center;
+    width: 50%;
+}
+
+/* Explanation */
+
+.explanation {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: start;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    margin-top: 5vh;
+}
+
+.explanation h2 {
+    width: 90%;
+    font-size: 2vw;
+    font-weight: 700;
+    margin: 2vh 0;
+    color: rgba(255, 255, 255, 1);
+    text-align: start;
+}
+
+.explanation h4 {
+    width: 90%;
+    font-size: 1vw;
+    font-weight: 700;
+    margin: 2vh 0;
+    color: rgba(255, 255, 255, 1);
+    text-align: center;
+}
+
+.explanation li {
+    width: 100%;
+    font-size: 0.8vw;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.8);
+    margin: 3.5vh 0;
+    text-align: center;
+}
+
+.explanation p {
+    width: 90%;
+    font-size: 0.8vw;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.8);
+    margin: 2vh 0;
+    text-align: center;
+}
+
+/* Footer */
+
+footer .footer {
+    /* position: absolute;
+    top: 150vh;
+    left: 0; */
+    margin-top: 5vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    background-color: #111010;
+    color: rgba(255, 255, 255, 0.8);
+    padding: 10vh 8vw;
+}
+
+footer .footer .catagories {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    width: 100%;
+    height: auto;
+    margin-bottom: 2vh;
+}
+
+footer .footer .catagories .catagory {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    width: 20%;
+    height: auto;
+}
+
+footer .footer .catagories .catagory p {
+    font-size: 1vw;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.5);
+    width: 100%;
+    margin: 0.75vh 0;
+}
+
+footer .footer .catagories .catagory .catagoryName {
+    color: rgba(255, 255, 255, 1);
+    margin-bottom: 1.5vh;
+}
+
+footer .footer .catagories .catagory p:hover {
+    color: rgba(255, 255, 255, 1);
+    cursor: pointer;
+}
+
+footer .footer .catagories .catagory .catagoryName:hover {
+    cursor: default;
+}
+
+footer .footer .catagories .catagory .social {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    margin-top: 1vh;
+}
+
+footer .footer .catagories .catagory .social .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3vw;
+    height: 3vw;
+    background-color: #1A1A1A;
+    margin-right: 0.5vw;
+    border-radius: 0.5vw;
+    border: 0.0625vw solid rgba(255, 255, 255, 0.1);
+    overflow-y: hidden;
+}
+
+footer .footer .catagories .catagory .social i {
+    font-size: 1.25vw;
+    color: rgba(255, 255, 255, 1);
+    overflow-y: hidden;
+}
+
+footer .footer .catagories .catagory .social .icon:hover {
+    background-color: #1F1F20;
+    cursor: pointer;
+}
+
+footer .footer .rights {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    width: 100%;
+    height: auto;
+    margin-top: 8vh;
+    padding-top: 2vh;
+    border-top: 0.0625vw solid rgba(255, 255, 255, 0.1);
+}
+
+footer .footer .rights p {
+    font-size: 0.75vw;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+footer .footer .rights .terms {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: auto;
+    height: auto;
+}
+
+footer .footer .rights .terms p {
+    margin: 0 0.75vw;
+}
+
+footer .footer .rights .terms p:hover {
+    color: rgba(255, 255, 255, 1);
+    cursor: pointer;
+}
+
+footer .footer .rights .terms .line {
+    width: 0.0625vw;
+    height: 1.5vh;
+    background-color: rgba(255, 255, 255, 0.1);
+}

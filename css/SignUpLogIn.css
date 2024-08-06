@@ -1,0 +1,403 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    font-family: "Encode Sans", sans-serif;
+}
+
+body {
+    background-color: #1E1E1E;
+    color: rgba(255, 255, 255, 0.8);
+    font-family: "Encode Sans", sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: unset;
+}
+
+/* Scrollbar */
+
+html {
+    overflow-y: scroll;
+    /* overflow-x: scroll; */
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 0.6vw;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #1E1E1E;
+    border: 0.125vw solid #f1f1f1;
+    border-radius: 0.625vw;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #1F1F20;
+    cursor: pointer;
+}
+
+/* Navbar */
+nav {
+    background-color: transparent;
+    position: fixed;
+    top: 2vh;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav .navbar {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 60%;
+    height: 8vh;
+    padding: 0.8vh 0;
+    margin: 1vh 0;
+    background-color: #1F1F20;
+    box-shadow: 0.0625vw 0.0625vw 0.3125vw rgb(255, 255, 255, 0.5);
+    border-radius: 25vw;
+}
+
+nav .navbar .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: 100%;
+    margin: 0 1.5vw;
+    margin-right: 12.5vw;
+}
+
+nav .navbar .logo img {
+    width: 4vh;
+    height: 4vh;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+nav .navbar .logo p {
+    font-size: 1vw;
+    font-weight: 700;
+    margin-left: 0.5vw;
+}
+
+nav .navbar .components {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: auto;
+    height: 100%;
+}
+
+nav .navbar .components a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.95vw;
+    margin: 0 1vw;
+}
+
+nav .navbar .components a:hover {
+    color: rgba(255, 255, 255, 1);
+}
+
+nav .navbar button {
+    width: auto;
+    height: 4.75vh;
+    padding: 0 1vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #EB5534;
+    border: 0.0625vw solid red;
+    border-radius: 0.5vw;
+    font-size: 0.9vw;
+    color: rgba(255, 255, 255, 0.8);
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: 2vw;
+}
+
+nav .navbar button:hover {
+    background-color: #FF6A3D;
+}
+
+/* Playground */
+
+.playground {
+    position: absolute;
+    top: 10vh;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 80vh;
+    background-color: #1E1E1E;
+}
+
+.playground p {
+    font-size: 1vw;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.5);
+    margin: 2vh;
+}
+
+.playground h4 {
+    font-size: 1.5vw;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 1);
+    margin: 2vh;
+}
+
+.playground .inputEmail input {
+    width: 30vw;
+    height: 6vh;
+    padding: 0 1vw;
+    background-color: #232426;
+    border: 0.0625vw solid rgba(255, 255, 255, 0.1);
+    border-radius: 0.5vw;
+    font-size: 1vw;
+    color: rgba(255, 255, 255, 0.8);
+    margin: 2vh;
+}
+
+.playground .inputPasswordLogIn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.0625vw;
+}
+
+.playground .inputPasswordLogIn input {
+    width: 22vw;
+    height: 6vh;
+    padding: 0 1vw;
+    background-color: #232426;
+    border: 0.0625vw solid rgba(255, 255, 255, 0.1);
+    border-radius: 0.5vw;
+    font-size: 1vw;
+    color: rgba(255, 255, 255, 0.8);
+    margin: 2vh 0.5vw;
+    margin-bottom: 0;
+}
+
+.playground .inputPasswordLogIn button {
+    width: 7vw;
+    height: 6vh;
+    padding: 0 1vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #EB5534;
+    border: 0.0625vw solid red;
+    border-radius: 0.5vw;
+    font-size: 1vw;
+    color: rgba(255, 255, 255, 0.8);
+    cursor: pointer;
+    margin: 2vh 0.5vw;
+    margin-bottom: 0;
+}
+
+.playground .inputPasswordLogIn button:hover {
+    background-color: #FF6A3D;
+}
+
+.playground .forgot {
+    width: 30vw;
+    text-align: start;
+    margin-top: 1vh;
+    font-size: 0.7vw;
+}
+
+.playground .inputPasswordSignUp {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.0625vw;
+}
+
+.playground .inputPasswordSignUp input {
+    width: 20vw;
+    height: 6vh;
+    padding: 0 1vw;
+    background-color: #232426;
+    border: 0.0625vw solid rgba(255, 255, 255, 0.1);
+    border-radius: 0.5vw;
+    font-size: 1vw;
+    color: rgba(255, 255, 255, 0.8);
+    margin: 2vh 0.5vw;
+    margin-bottom: 0;
+}
+
+.playground .inputPasswordSignUp button {
+    width: 9vw;
+    height: 6vh;
+    padding: 0 1vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #EB5534;
+    border: 0.0625vw solid red;
+    border-radius: 0.5vw;
+    font-size: 1vw;
+    color: rgba(255, 255, 255, 0.8);
+    cursor: pointer;
+    margin: 2vh 0.5vw;
+    margin-bottom: 0;
+}
+
+.playground .inputPasswordSignUp button:hover {
+    background-color: #FF6A3D;
+}
+
+.playground .privacy {
+    width: 30vw;
+    text-align: start;
+    margin-top: 1vh;
+    font-size: 0.7vw;
+}
+
+/* Footer */
+
+footer .footer {
+    position: absolute;
+    top: 150vh;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    background-color: #111010;
+    color: rgba(255, 255, 255, 0.8);
+    padding: 10vh 8vw;
+}
+
+footer .footer .catagories {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    width: 100%;
+    height: auto;
+    margin-bottom: 2vh;
+}
+
+footer .footer .catagories .catagory {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    width: 20%;
+    height: auto;
+}
+
+footer .footer .catagories .catagory p {
+    font-size: 1vw;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.5);
+    width: 100%;
+    margin: 0.75vh 0;
+}
+
+footer .footer .catagories .catagory .catagoryName {
+    color: rgba(255, 255, 255, 1);
+    margin-bottom: 1.5vh;
+}
+
+footer .footer .catagories .catagory p:hover {
+    color: rgba(255, 255, 255, 1);
+    cursor: pointer;
+}
+
+footer .footer .catagories .catagory .catagoryName:hover {
+    cursor: default;
+}
+
+footer .footer .catagories .catagory .social {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    margin-top: 1vh;
+}
+
+footer .footer .catagories .catagory .social .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3vw;
+    height: 3vw;
+    background-color: #1A1A1A;
+    margin-right: 0.5vw;
+    border-radius: 0.5vw;
+    border: 0.0625vw solid rgba(255, 255, 255, 0.1);
+    overflow-y: hidden;
+}
+
+footer .footer .catagories .catagory .social i {
+    font-size: 1.25vw;
+    color: rgba(255, 255, 255, 1);
+    overflow-y: hidden;
+}
+
+footer .footer .catagories .catagory .social .icon:hover {
+    background-color: #1F1F20;
+    cursor: pointer;
+}
+
+footer .footer .rights {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    width: 100%;
+    height: auto;
+    margin-top: 8vh;
+    padding-top: 2vh;
+    border-top: 0.0625vw solid rgba(255, 255, 255, 0.1);
+}
+
+footer .footer .rights p {
+    font-size: 0.75vw;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+footer .footer .rights .terms {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: auto;
+    height: auto;
+}
+
+footer .footer .rights .terms p {
+    margin: 0 0.75vw;
+}
+
+footer .footer .rights .terms p:hover {
+    color: rgba(255, 255, 255, 1);
+    cursor: pointer;
+}
+
+footer .footer .rights .terms .line {
+    width: 0.0625vw;
+    height: 1.5vh;
+    background-color: rgba(255, 255, 255, 0.1);
+}

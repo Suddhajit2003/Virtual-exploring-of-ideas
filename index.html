@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Home</title>
+    <link rel="icon" href="../images/logo.png">
+    <link rel="stylesheet" href="../css/index.css">
+</head>
+<body>
+    <nav>
+        <div class="navbar">
+            <a href="./index.html">
+                <div class="logo">
+                    <img src="../images/logo.png" alt="logo">
+                    <p>Virtual Ideas</p>
+                </div>
+            </a>
+            <div class="components">
+                <div class="search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="Search Project">
+                </div>
+                <a href="./index.html">Home</a>
+                <a href="#">Account</a>
+                <a href="#">About</a>
+            </div>
+            <button onclick="redirectToSignUpLogIn()" >Login or Signup</button>
+        </div>
+    </nav>
+    <div class="title">
+        <h1>Virtual exploring <br> ideas</h1>
+        <p>Newly developed concepts and various types of computer science project related content are easily <br> available</p>
+    </div>
+    <img src="../images/cristal.png" alt="cristal" id="cristal">
+    <div class="container">
+        <div class="card" onclick="redirectToExplanation()">
+            <img src="../images/brainInHand.png" alt="brainInHand">
+            <span>23RD JUL 2024</span>
+            <h4>10 common web development mistakes to avoid</h4>
+            <p>10 common web development mistakes and improve your site's functionality and user experience.</p>
+        </div>
+        <div class="card" onclick="redirectToExplanation()">
+            <img src="../images/ManWithLaptop.png" alt="ManWithLaptop">
+            <span>23RD JUL 2024</span>
+            <h4>Why responsive web design is critical for your business</h4>
+            <p>Responsive web design ensures your site looks great and performs well on all devices.</p>
+        </div>
+        <div class="card" onclick="redirectToExplanation()">
+            <img src="../images/AI.png" alt="AI">
+            <span>23RD JUL 2024</span>
+            <h4>The art of SEO writing: How to write content that ranks on Google</h4>
+            <p>Optimize your website with expert tips on writing content that ranks high on Google.</p>
+        </div>
+    </div>
+    <footer>
+        <div class="footer">
+            <div class="catagories">
+                <div class="catagory">
+                    <p class="catagoryName">Home</p>
+                    <p>Categories</p>
+                    <p>Devices</p>
+                    <p>Pricing</p>
+                    <p>FAQ</p>
+                </div>
+                <div class="catagory">
+                    <p class="catagoryName">Movies</p>
+                    <p>Gernes</p>
+                    <p>Trending</p>
+                    <p>New Release</p>
+                    <p>Popular</p>
+                </div>
+                <div class="catagory">
+                    <p class="catagoryName">Shows</p>
+                    <p>Gernes</p>
+                    <p>Trending</p>
+                    <p>New Release</p>
+                    <p>Popular</p>
+                </div>
+                <div class="catagory">
+                    <p class="catagoryName">Support</p>
+                    <p>Contact Us</p>
+                </div>
+                <div class="catagory">
+                    <p class="catagoryName">Subscription</p>
+                    <p>Plans</p>
+                    <p>Features</p>
+                </div>
+                <div class="catagory">
+                    <p class="catagoryName">Connect With Us</p>
+                    <div class="social">
+                        <div class="icon"><i class="fab fa-facebook-f"></i></div>
+                        <div class="icon"><i class="fab fa-twitter"></i></div>
+                        <div class="icon"><i class="fab fa-linkedin"></i></div>
+                    </div>
+                </div>
+            </div>
+            <div class="rights">
+                <p>@2024 Virtual Ideas, All Rights Reserved</p>
+                <div class="terms">
+                    <p>Terms of Use</p>
+                    <div class="line"></div>
+                    <p>Privacy Policy</p>
+                    <div class="line"></div>
+                    <p>Cookie Policy</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="../js/index.js"></script>
+</body>
+</html>

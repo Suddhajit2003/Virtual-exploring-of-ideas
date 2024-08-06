@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>Pseudocode</title>
+    <link rel="icon" href="../images/logo.png">
+    <link rel="stylesheet" href="../css/pseudocode.css">
+</head>
+<body>
+    <nav>
+        <div class="navbar">
+            <a href="./index.html">
+                <div class="logo">
+                    <img src="../images/logo.png" alt="logo">
+                    <p>Virtual Ideas</p>
+                </div>
+            </a>
+            <div class="components">
+                <div class="search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="Search Project">
+                </div>
+                <a href="./index.html">Home</a>
+                <a href="#">Account</a>
+                <a href="#">About</a>
+            </div>
+            <button onclick="redirectToSignUpLogIn()" >Login or Signup</button>
+        </div>
+    </nav>
+
+    <button id="play" onclick="redirectToVideo()"><i class="fa-solid fa-play"></i></button>
+
+    <div class="sidebar">
+        <div class="head">
+            <a href="./index.html">
+                <div class="logo">
+                    <img src="../images/logo.png" alt="logo">
+                    <p>Virtual Ideas</p>
+                </div>
+            </a>
+            <i class="fa-solid fa-chevron-left"></i>
+        </div>
+        <ul>
+            <li><a href="./explanation.html">Explanation</a></li>
+            <li><div class="line"></div>Pseudocode</li>
+            <li><a href="./feedback.html">Feedback</a></li>
+        </ul>
+    </div>
+
+    <div class="explanation">
+        <h4>Creating a smart home automation system involves integrating various hardware components (sensors, controllers, actuators) with software that can control and monitor these devices. Below is a basic example using Python to create a simple smart home automation system with the following functionalities:</h4>
+        <ol>
+            <li>- Controlling lights</li>
+            <li>- Monitoring temperature</li>
+            <li>- Sending notifications</li>
+        </ol>
+        <p>This example assumes the use of an MQTT broker for communication between devices.</p>
+        <h4><b>Requirements</b></h4>
+        <ol>
+            <li>- Raspberry Pi (or any other microcontroller)</li>
+            <li>- Python 3</li>
+            <li>- MQTT broker (e.g., Mosquitto)</li>
+            <li>- DHT11 or DHT22 temperature and humidity sensor</li>
+            <li>- LED for simulating light control</li>
+        </ol>
+        <h4><b>Hardware Setup</b></h4>
+        <ol>
+            <li>1. Connect the DHT11/DHT22 sensor to the Raspberry Pi.</li>
+            <li>2. Connect the LED to a GPIO pin on the Raspberry Pi.</li>
+        </ol>
+        <h4><b>Software Setup</b></h4>
+        <ol>
+            <li>
+                <h4>1. Install the required libraries:</h4>
+                <p>```bash</p>
+                <p>pip install paho-mqtt Adafruit_DHT</p>
+                <p>```</p>
+            </li>
+            <li>
+                <h4>2. Set up an MQTT broker (e.g., Mosquitto) on your network.</h4>
+            </li>
+        </ol>
+        <h4><b>Code</b></h4>
+        <h4><b>MQTT Client</b></h4>
+        <p>First, create an MQTT client to handle communication between devices.</p>
+        <p>```python</p>
+        <p>import paho.mqtt.client as mqtt</p>
+        <h4><b>MQTT Broker details</b></h4>
+        <p>BROKER = 'broker.hivemq.com'  # You can use a public broker for testing</p>
+        <p>PORT = 1883</p>
+        <p>TOPIC_LIGHT = 'home/light'</p>
+        <p>TOPIC_TEMP = 'home/temperature'</p>
+        <p>def on_connect(client, userdata, flags, rc): <br><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;print("Connected with result code "+str(rc))<br><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;client.subscribe(TOPIC_LIGHT)<br><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;client.subscribe(TOPIC_TEMP)
+        </p>
+        <p>
+            def on_message(client, userdata, msg):<br><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;print(f"{msg.topic}: {msg.payload.decode()}")
+        </p>
+        <p>client = mqtt.Client()</p>
+        <p>client.on_connect = on_connect</p>
+        <p>client.on_message = on_message</p>
+        <p>client.connect(BROKER, PORT, 60)</p>
+        <p>```</p>
+        <h4><b>Light Control</b></h4>
+        <p>Control an LED to simulate light control.</p>
+    </div>
+
+    <footer>
+        <div class="footer">
+            <div class="catagories">
+                <div class="catagory">
+                    <p class="catagoryName">Home</p>
+                    <p>Categories</p>
+                    <p>Devices</p>
+                    <p>Pricing</p>
+                    <p>FAQ</p>
+                </div>
+                <div class="catagory">
+                    <p class="catagoryName">Movies</p>
+                    <p>Gernes</p>
+                    <p>Trending</p>
+                    <p>New Release</p>
+                    <p>Popular</p>
+                </div>
+                <div class="catagory">
+                    <p class="catagoryName">Shows</p>
+                    <p>Gernes</p>
+                    <p>Trending</p>
+                    <p>New Release</p>
+                    <p>Popular</p>
+                </div>
+                <div class="catagory">
+                    <p class="catagoryName">Support</p>
+                    <p>Contact Us</p>
+                </div>
+                <div class="catagory">
+                    <p class="catagoryName">Subscription</p>
+                    <p>Plans</p>
+                    <p>Features</p>
+                </div>
+                <div class="catagory">
+                    <p class="catagoryName">Connect With Us</p>
+                    <div class="social">
+                        <div class="icon"><i class="fab fa-facebook-f"></i></div>
+                        <div class="icon"><i class="fab fa-twitter"></i></div>
+                        <div class="icon"><i class="fab fa-linkedin"></i></div>
+                    </div>
+                </div>
+            </div>
+            <div class="rights">
+                <p>@2024 Virtual Ideas, All Rights Reserved</p>
+                <div class="terms">
+                    <p>Terms of Use</p>
+                    <div class="line"></div>
+                    <p>Privacy Policy</p>
+                    <div class="line"></div>
+                    <p>Cookie Policy</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="../js/pseudocode.js"></script>
+</body>
+</html>

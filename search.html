@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>Search</title>
+    <link rel="icon" href="../images/logo.png">
+    <link rel="stylesheet" href="../css/search.css">
+</head>
+<body>
+    <nav>
+        <div class="navbar">
+            <a href="./index.html">
+                <div class="logo">
+                    <img src="../images/logo.png" alt="logo">
+                    <p>Virtual Ideas</p>
+                </div>
+            </a>
+            <div class="components">
+                <div class="search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="Search Project">
+                </div>
+                <a href="./index.html">Home</a>
+                <a href="#">Account</a>
+                <a href="#">About</a>
+            </div>
+            <button onclick="redirectToSignUpLogIn()" >Login or Signup</button>
+        </div>
+    </nav>
+
+    <button id="filter"><span class="material-symbols-outlined">filter_list</span>Filter</button>
+
+    <div class="resultBox">
+        <div class="card">
+            <img src="../images/search1.png" alt="search1">
+            <div class="result">
+                <h4>Personal Finance Management System</h4>
+                <p>Develop an application that helps users manage their finances, track spending, and set budgets.</p>
+                <div class="options">
+                    <div class="left"><span id="save">Save for later</span><span id="remove">Remove</span></div>
+                    <div class="right"><a href="./explanation.html"><button id="learn">Learn More <i class="fa-solid fa-arrow-right"></i></button></a><a href="./video.html"><button id="play"><i class="fa-solid fa-play"></i></button></a></div>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="../images/search2.png" alt="search2">
+            <div class="result">
+                <h4>Smart Home Automation System</h4>
+                <p>Create a system that controls home devices (lights, thermostat, security cameras) through a mobile app or voice commands.</p>
+                <div class="options">
+                    <div class="left"><span id="save">Save for later</span><span id="remove">Remove</span></div>
+                    <div class="right"><a href="./explanation.html"><button id="learn">Learn More <i class="fa-solid fa-arrow-right"></i></button></a><a href="./video.html"><button id="play"><i class="fa-solid fa-play"></i></button></a></div>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="../images/search3.png" alt="search3">
+            <div class="result">
+                <h4>E-commerce Website</h4>
+                <p>Build an online store complete with product listings, shopping cart, user accounts, and payment integration.</p>
+                <div class="options">
+                    <div class="left"><span id="save">Save for later</span><span id="remove">Remove</span></div>
+                    <div class="right"><a href="./explanation.html"><button id="learn">Learn More <i class="fa-solid fa-arrow-right"></i></button></a><a href="./video.html"><button id="play"><i class="fa-solid fa-play"></i></button></a></div>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="../images/search4.png" alt="search4">
+            <div class="result">
+                <h4>Chatbot for Customer Service</h4>
+                <p>Design a chatbot using natural language processing to assist customers with inquiries and support.</p>
+                <div class="options">
+                    <div class="left"><span id="save">Save for later</span><span id="remove">Remove</span></div>
+                    <div class="right"><a href="./explanation.html"><button id="learn">Learn More <i class="fa-solid fa-arrow-right"></i></button></a><a href="./video.html"><button id="play"><i class="fa-solid fa-play"></i></button></a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer">
+            <div class="catagories">
+                <div class="catagory">
+                    <p class="catagoryName">Home</p>
+                    <p>Categories</p>
+                    <p>Devices</p>
+                    <p>Pricing</p>
+                    <p>FAQ</p>
+                </div>
+                <div class="catagory">
+                    <p class="catagoryName">Movies</p>
+                    <p>Gernes</p>
+                    <p>Trending</p>
+                    <p>New Release</p>
+                    <p>Popular</p>
+                </div>
+                <div class="catagory">
+                    <p class="catagoryName">Shows</p>
+                    <p>Gernes</p>
+                    <p>Trending</p>
+                    <p>New Release</p>
+                    <p>Popular</p>
+                </div>
+                <div class="catagory">
+                    <p class="catagoryName">Support</p>
+                    <p>Contact Us</p>
+                </div>
+                <div class="catagory">
+                    <p class="catagoryName">Subscription</p>
+                    <p>Plans</p>
+                    <p>Features</p>
+                </div>
+                <div class="catagory">
+                    <p class="catagoryName">Connect With Us</p>
+                    <div class="social">
+                        <div class="icon"><i class="fab fa-facebook-f"></i></div>
+                        <div class="icon"><i class="fab fa-twitter"></i></div>
+                        <div class="icon"><i class="fab fa-linkedin"></i></div>
+                    </div>
+                </div>
+            </div>
+            <div class="rights">
+                <p>@2024 Virtual Ideas, All Rights Reserved</p>
+                <div class="terms">
+                    <p>Terms of Use</p>
+                    <div class="line"></div>
+                    <p>Privacy Policy</p>
+                    <div class="line"></div>
+                    <p>Cookie Policy</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="../js/search.js"></script>
+</body>
+</html>
